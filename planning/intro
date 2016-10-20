@@ -1,0 +1,91 @@
+This program will generate a village for a dnd like enviroment
+
+it will create however many people you want living in the village and assign them various attributes
+
+Once all the adults are generated, most will be paired up into couples and children will be made based on them and assigned to the family unit.
+
+Family lineage will be stored as trees based on the first couples in the village.
+
+
+Race attributes:
+	breeding age
+	avg number of children per birth
+	avg number of births
+
+
+#persons attributes
+Stats:
+	Strength
+	Dexterity
+	Constitution
+	Intelligence
+	Wisdom
+	Charisma
+
+Possessions:
+	Clothing:
+		head
+		eyes
+		neck
+		shoulders
+		back
+		torso
+		waist
+		arms/wrists
+		hands
+		ring #1
+		ring #2
+		legs
+		feet
+
+	items:
+		money
+		held items
+		ttweapons
+		ect
+
+	Property:
+		house,tavern, horse ect
+
+
+Relationships:
+	Family:
+		father
+		mother
+		children
+		other relatives
+
+	general:
+		relationships with other people 
+		in the village
+		10 is neutral 
+		20 is best possible friend
+		0 is worst enemy
+	
+Health:
+	possible ailments
+	missing limbs
+	ect
+
+
+Appearence:
+	what they look like.
+	race, skin color, eye color,
+	height, weight, age
+	attractiveness (0,20)
+preferences:
+	likes
+	dislikes
+
+
+misc:
+	general attitude
+	factions
+	first name
+	middle name
+	last name
+	profession
+	wealth
+
+
+
