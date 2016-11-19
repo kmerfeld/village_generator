@@ -1,3 +1,4 @@
+from family import family
 #!/usr/bin/env python3
 import random
 
@@ -11,6 +12,9 @@ class person:
     middle_name = "Bobber"
     last_name   = "Bobbert"
     
+    #family info
+    dad_family = family() 
+    mom_family = family() 
 
     #clothing
     head        = "cloth hat"
@@ -64,6 +68,8 @@ class person:
             return True 
         return False
 
+    
+    
 
     def to_string(self):
          return(self.first_name 

@@ -20,7 +20,7 @@ def family():
         for i in num_kids:
             kid = person()
 
-    def __init(self, dad, mom):
+    def __init__(self, dad, mom):
         father = dad
         mother = mom
 

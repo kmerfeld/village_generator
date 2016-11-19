@@ -1,9 +1,33 @@
 #!/usr/bin/env python3
 import random
 from person import *
+from family import *
 #read in file
 
 
+
+
+def make_person():
+    g = random.randint(0,1)
+    fname = ""
+    mname = ""
+    lname = ""
+
+    if g == 1:
+        gender = "male"
+        lname = random.choice(l_names)
+        mname = random.choice(male_m_names)
+        fname = random.choice(male_f_names)
+    else:
+
+        gender = "female"
+        lname = random.choice(l_names)
+        mname = random.choice(female_m_names)
+        fname = random.choice(female_f_names)
+    
+
+
+    p = person(fname,mname,lname,gender)
 
 
 
@@ -25,7 +49,6 @@ def create_people(config):
     catagory = ""
 
 
-    #the way i am reading the config file is terrible. Im going to refactor this
     #TODO: make this way less shit
     for i in config:
         #skip empty lines
@@ -62,30 +85,9 @@ def create_people(config):
                 number_villagers = i
             
 
-
-
     for x in range(int(number_villagers)):
-        g = random.randint(0,1)
-        fname = ""
-        mname = ""
-        lname = ""
-
-        if g == 1:
-            gender = "male"
-            lname = random.choice(l_names)
-            mname = random.choice(male_m_names)
-            fname = random.choice(male_f_names)
-        else:
-
-            gender = "female"
-            lname = random.choice(l_names)
-            mname = random.choice(female_m_names)
-            fname = random.choice(female_f_names)
-        
-
-
-        p = person(fname,mname,lname,gender)
-        people.append(p)
+                p = make_person()
+                people.append(p)
 
     for x in range(len(people)):
         print(people[x].to_string())
@@ -125,9 +127,9 @@ def make_familes(people):
 
     print("### Females")
     print (len(females))
+
     #TODO: currently this will marry everyone possible. 
     #this should be scaled back later
-
     pairs = []
     if len(males) > len(females):
         for i in females:
@@ -143,4 +145,9 @@ def make_familes(people):
 
     #ok, now we have a few pairs, we will make some families
     for i in pairs:
-        x = family
+        #x =  family(i[0],i[1])
+        x = family.__init__(i[0],i[1])
+        
+    
+    #lets make some babies *giggidy*
+
